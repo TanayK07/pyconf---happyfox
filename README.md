@@ -91,6 +91,10 @@ python test_system.py
 ## Video Demo
 
 
+
+https://github.com/user-attachments/assets/5e3b7a86-7107-4d9a-b437-b23e559ab071
+
+
 ## Configuration
 
 Edit `config.json` to customize:
