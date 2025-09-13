@@ -10,7 +10,7 @@ import json
 from datetime import datetime
 
 from ticket_assignment_system import AdvancedTicketAssignmentSystem
-from ml_ticket_classifier import MLTicketClassifier
+# from ml_ticket_classifier import MLTicketClassifier
 from dashboard import TicketDashboard, generate_dashboard
 from utils import validate_data, ReportGenerator
 
@@ -76,18 +76,18 @@ def main():
     print(" Loading data...")
     system.load_data(args.input)
     
-    if args.ml_enhanced:
-        print("\n Enabling ML-enhanced classification...")
-        ml_classifier = MLTicketClassifier()
+    # if args.ml_enhanced:
+    #     print("\n Enabling ML-enhanced classification...")
+    #     ml_classifier = MLTicketClassifier()
         
-        with open(args.input, 'r') as f:
-            data = json.load(f)
+    #     with open(args.input, 'r') as f:
+    #         data = json.load(f)
         
-        ml_classifier.train_skill_model(data['tickets'], data['agents'])
-        print(" ML model trained")
+    #     ml_classifier.train_skill_model(data['tickets'], data['agents'])
+    #     print(" ML model trained")
         
-        ml_classifier.save_model('ml_model.pkl')
-        print(" ML model saved")
+    #     ml_classifier.save_model('ml_model.pkl')
+    #     print(" ML model saved")
     
     print("\n Starting ticket assignment process...")
     system.assign_tickets()
