@@ -1,0 +1,71 @@
+{
+  "system_config": {
+    "max_load_per_agent": 10,
+    "min_skill_match_threshold": 0.3,
+    "auto_escalation_time_hours": 4,
+    "sla_thresholds": {
+      "CRITICAL": 1,
+      "HIGH": 4,
+      "MEDIUM": 24,
+      "LOW": 72
+    }
+  },
+  "weights": {
+    "skill_match_weight": 0.4,
+    "experience_weight": 0.2,
+    "workload_weight": 0.2,
+    "priority_weight": 0.2
+  },
+  "priority_keywords": {
+    "critical": [
+      "critical", "urgent", "emergency", "down", "outage", 
+      "security breach", "data loss", "production down", 
+      "business-critical", "major incident"
+    ],
+    "high": [
+      "failing", "error", "unable", "blocked", "stopped",
+      "not working", "broken", "high priority", "asap"
+    ],
+    "medium": [
+      "issue", "problem", "slow", "intermittent", "sometimes"
+    ],
+    "low": [
+      "request", "question", "inquiry", "information", "setup"
+    ]
+  },
+  "skill_categories": {
+    "networking": [
+      "Networking", "VPN_Troubleshooting", "Network_Security",
+      "Network_Monitoring", "DNS_Configuration", "Firewall_Configuration"
+    ],
+    "security": [
+      "Network_Security", "Endpoint_Security", "Antivirus_Malware",
+      "Phishing_Analysis", "Security_Audits", "SIEM_Logging"
+    ],
+    "hardware": [
+      "Hardware_Diagnostics", "Laptop_Repair", "Printer_Troubleshooting"
+    ],
+    "cloud": [
+      "Cloud_AWS", "Cloud_Azure", "DevOps_CI_CD", "Kubernetes_Docker"
+    ],
+    "windows": [
+      "Windows_Server_2022", "Windows_OS", "Active_Directory",
+      "Microsoft_365", "SharePoint_Online", "PowerShell_Scripting"
+    ],
+    "database": [
+      "Database_SQL", "ETL_Processes", "Data_Warehousing", "PowerBI_Tableau"
+    ]
+  },
+  "escalation_rules": {
+    "unassigned_threshold_minutes": 30,
+    "high_priority_escalation_minutes": 15,
+    "critical_priority_escalation_minutes": 5,
+    "max_reassignment_attempts": 3
+  },
+  "notification_settings": {
+    "enable_email": true,
+    "enable_slack": false,
+    "enable_webhook": false,
+    "critical_alert_channels": ["security-team", "management"]
+  }
+}

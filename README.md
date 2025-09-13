@@ -1,92 +1,115 @@
-# PyCon25 Hackathon: Intelligent Support Ticket Assignment System
+# Intelligent Support Ticket Assignment System
+PyCon25 Hackathon Project
 
-Welcome to the PyCon25 Hackathon project! 🚀
+## Overview
+An intelligent system that automatically assigns support tickets to the most suitable agents based on skills, workload, and priority.
 
-Once you are done with the hackathon, share your github link here: https://forms.gle/gnR62EoZUfeA8zqJ9
+## Features
+- Automatic skill extraction from ticket descriptions
+- Priority-based assignment with business impact analysis
+- Fair workload distribution across agents
+- Skill gap identification and recommendations
+- Comprehensive assignment rationale
 
-## 📋 Project Overview
+## Installation
 
-### Problem Statement
+```bash
+# Clone the repository
+git clone <repository-url>
+cd pycon25-hackathon
 
-In a helpdesk system, when customers raise support issues about different topics, we should ideally route tickets to agents who have knowledge and experience in solving that particular set of problems. However:
+# Install dependencies (optional - only for ML features)
+pip install -r requirements.txt
 
-- **Volume Imbalance**: Not all topics have equal request volumes
-- **Skill Gaps**: Not all agents have expertise in all areas
-- **Fair Distribution**: Workload needs to be distributed equitably
-- **Effective Resolution**: Tickets should go to the most capable agents
+# Run the system
+python run_system.py --input dataset.json --output output_result.json
 
-### Challenge
+# Run with ML enhancement (requires scikit-learn)
+python run_system.py --ml-enhanced
+```
 
-Build an optimal routing system that assigns support tickets to the best possible agent while ensuring:
-- ✅ Maximum likelihood of successful resolution
-- ✅ Fair distribution of workload across agents
-- ✅ Effective prioritization of issues
-- ✅ Cost-effective and scalable approach
+## Quick Start
 
-## 📊 Data Structure
+Basic usage:
+```bash
+python ticket_assignment_system.py
+```
 
-### Input: `dataset.json`
-Contains two main sections:
-- **Agents**: Support staff with skills, availability, and experience levels
-- **Tickets**: Support requests with descriptions and timestamps
+With custom configuration:
+```bash
+python run_system.py --input dataset.json --output output_result.json --config config.json
+```
 
-### Output: `output_result.json`
-Your solution should generate ticket assignments with the following fields:
-
-- **Mandatory:**
-   - Ticket ID
-   - Assigned Agent ID
-- **Optional:**
-   - Rationale/Justification for the assignment
-
-
-## 🎯 Evaluation Criteria
-
-Your solution will be judged on:
-
-1. **Assignment Effectiveness** 
-   - How well tickets are matched to agent skills
-   - Likelihood of successful resolution
-
-2. **Prioritization Strategy**
-   - Creative use of ticket and agent attributes
-   - Intelligent priority scoring
-
-3. **Load Balancing**
-   - Fair distribution of workload
-   - Agent availability management
-
-4. **Performance & Scalability**
-   - Cost efficiency of the approach
-   - Ability to handle large datasets
-
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 pycon25-hackathon/
-├── dataset.json           # Input data (agents and tickets)
-├── output_result.json     # Expected output
-├── README.md             # This file
-└── [your solution files] # Your implementation
+├── dataset.json                 # Input data (agents and tickets)
+├── ticket_assignment_system.py  # Core assignment engine
+├── ml_ticket_classifier.py      # ML-enhanced classification (optional)
+├── utils.py                     # Utility functions
+├── run_system.py               # Main execution script
+├── test_system.py              # Test suite
+├── config.json                 # Configuration file
+├── requirements.txt            # Dependencies (optional)
+└── README.md                   # This file
 ```
 
-## 📈 Success Metrics
+## Output Format
 
-Your solution should optimize for:
-- **Resolution Rate**: Tickets assigned to skilled agents
-- **Response Time**: Efficient agent utilization
-- **Workload Distribution**: Balanced assignment across team
-- **Scalability**: Performance with increasing data size
+The system generates a JSON file with:
+- Ticket assignments with agent details
+- Priority scores and business impact
+- Detailed assignment rationale
+- Analytics and recommendations
 
-## 🤝 Contributing
+Example output:
+```json
+{
+  "ticket_id": "TKT-2025-001",
+  "assigned_agent_id": "agent_001",
+  "priority": "CRITICAL",
+  "rationale": "Assigned to Sarah Chen - Strong skills in Networking (9), experienced professional"
+}
+```
 
-This is a hackathon project - unleash your creativity and build an innovative solution!
+## Algorithm
 
----
+The system uses a weighted scoring algorithm:
+- 40% Skill match
+- 20% Experience level  
+- 20% Current workload
+- 20% Priority handling capability
 
-**Happy Hacking!** 🎉
+## Testing
+
+Run the test suite:
+```bash
+python test_system.py
+```
+
+## Video Demo
 
 
+## Configuration
 
+Edit `config.json` to customize:
+- Maximum tickets per agent
+- Skill matching weights
+- Priority keywords
+- SLA thresholds
 
+## Results
 
+The system outputs:
+- `output_result.json` - Complete assignment results with analytics
+- `output_result_simplified.json` - Simplified view of assignments
+
+## License
+
+Created for PyCon25 Hackathon
+
+## Contact
+
+Tanay Kedia
+9101830620

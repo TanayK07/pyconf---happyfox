@@ -1,0 +1,881 @@
+Project Snapshot: pycon-25-hackathon
+Generated: 2025-09-13 17:08:04
+============================================================
+
+Directory Structure:
+----------------------------------------
+📁 pycon-25-hackathon
+  📄 dataset.json
+  📄 README.md
+  📄 sample_output_result.json
+
+============================================================
+File Contents:
+============================================================
+
+--- File: dataset.json ---
+{
+  "agents": [
+    {
+      "agent_id": "agent_001",
+      "name": "Sarah Chen",
+      "skills": {
+        "Networking": 9,
+        "Linux_Administration": 7,
+        "Cloud_AWS": 5,
+        "VPN_Troubleshooting": 8,
+        "Hardware_Diagnostics": 3
+      },
+      "current_load": 2,
+      "availability_status": "Available",
+      "experience_level": 7
+    },
+    {
+      "agent_id": "agent_002",
+      "name": "Alex Rodriguez",
+      "skills": {
+        "Windows_Server_2022": 9,
+        "Active_Directory": 10,
+        "Virtualization_VMware": 8,
+        "Software_Licensing": 6
+      },
+      "current_load": 4,
+      "availability_status": "Available",
+      "experience_level": 12
+    },
+    {
+      "agent_id": "agent_003",
+      "name": "Michael Lee",
+      "skills": {
+        "Network_Security": 9,
+        "Database_SQL": 8,
+        "Firewall_Configuration": 9,
+        "Identity_Management": 7,
+        "SaaS_Integrations": 6
+      },
+      "current_load": 3,
+      "availability_status": "Available",
+      "experience_level": 10
+    },
+    {
+      "agent_id": "agent_004",
+      "name": "Jessica Williams",
+      "skills": {
+        "Microsoft_365": 10,
+        "SharePoint_Online": 9,
+        "PowerShell_Scripting": 8,
+        "Endpoint_Management": 7,
+        "Windows_OS": 9
+      },
+      "current_load": 1,
+      "availability_status": "Available",
+      "experience_level": 5
+    },
+    {
+      "agent_id": "agent_005",
+      "name": "David Gupta",
+      "skills": {
+        "Cloud_Azure": 9,
+        "DevOps_CI_CD": 8,
+        "Kubernetes_Docker": 7,
+        "Python_Scripting": 9
+      },
+      "current_load": 2,
+      "availability_status": "Available",
+      "experience_level": 6
+    },
+    {
+      "agent_id": "agent_006",
+      "name": "Emily Johnson",
+      "skills": {
+        "Hardware_Diagnostics": 9,
+        "Mac_OS": 8,
+        "Printer_Troubleshooting": 9,
+        "Laptop_Repair": 8,
+        "Network_Cabling": 6
+      },
+      "current_load": 3,
+      "availability_status": "Available",
+      "experience_level": 8
+    },
+    {
+      "agent_id": "agent_007",
+      "name": "Chris Davis",
+      "skills": {
+        "Voice_VoIP": 10,
+        "Network_Monitoring": 8,
+        "Switch_Configuration": 9,
+        "Routing_Protocols": 8,
+        "Cisco_IOS": 7
+      },
+      "current_load": 4,
+      "availability_status": "Available",
+      "experience_level": 11
+    },
+    {
+      "agent_id": "agent_008",
+      "name": "Laura Martinez",
+      "skills": {
+        "Endpoint_Security": 9,
+        "Antivirus_Malware": 10,
+        "Phishing_Analysis": 8,
+        "Security_Audits": 7,
+        "SIEM_Logging": 6
+      },
+      "current_load": 2,
+      "availability_status": "Available",
+      "experience_level": 9
+    },
+    {
+      "agent_id": "agent_009",
+      "name": "James Brown",
+      "skills": {
+        "Database_SQL": 9,
+        "ETL_Processes": 8,
+        "Data_Warehousing": 7,
+        "PowerBI_Tableau": 6,
+        "Linux_Administration": 5
+      },
+      "current_load": 1,
+      "availability_status": "Available",
+      "experience_level": 4
+    },
+    {
+      "agent_id": "agent_010",
+      "name": "Michelle Kim",
+      "skills": {
+        "SaaS_Integrations": 8,
+        "API_Troubleshooting": 9,
+        "Web_Server_Apache_Nginx": 7,
+        "DNS_Configuration": 6,
+        "SSL_Certificates": 7
+      },
+      "current_load": 3,
+      "availability_status": "Available",
+      "experience_level": 6
+    }
+  ],
+  "tickets": [
+    {
+      "ticket_id": "TKT-2025-001",
+      "title": "VPN connection dropping intermittently for all remote users",
+      "description": "Users connecting via the corporate VPN client are experiencing frequent, random disconnections. This issue seems to be widespread and is affecting multiple departments, particularly those using resource-intensive applications. Users report seeing 'VPN tunnel failed' or 'Authentication error' messages before being disconnected. A brief check of the network logs shows a high volume of dropped packets originating from the VPN concentrator. We have already tried restarting the concentrator, but the issue persists. This is severely impacting productivity.",
+      "creation_timestamp": 1757827200
+    },
+    {
+      "ticket_id": "TKT-2025-002",
+      "title": "Email access problem in Outlook for one specific user",
+      "description": "A single user, Jane Smith, is unable to access her email in Microsoft Outlook 365. The application keeps prompting for her password in a continuous loop, but it never accepts it. She can, however, log into her account and access email via the web version (Outlook on the web). We've already tried clearing the credential manager, repairing the Office installation, and even reinstalling Outlook. The issue seems to be localized to her desktop client and possibly related to a recent security patch or an account-specific setting. Her co-workers on the same network are not affected.",
+      "creation_timestamp": 1757828000
+    },
+    {
+      "ticket_id": "TKT-2025-003",
+      "title": "Access denied to shared drive on Linux server after permission change",
+      "description": "A group of developers is reporting that they can no longer access a shared project directory on the new Linux development server. The `ls -l` command shows that their user group permissions have been changed from read/write to read-only. This change was implemented yesterday as part of a security audit, but it was not supposed to affect this specific group. They need full read/write access to commit code changes. We need to verify if the new permissions are correct and if not, restore them to the previous state without compromising the security policy.",
+      "creation_timestamp": 1757828500
+    },
+    {
+      "ticket_id": "TKT-2025-004",
+      "title": "New laptop fails to boot into OS after initial setup",
+      "description": "A brand new laptop (Model: XPS 15) received today is stuck in a boot loop. The device was configured with the standard corporate image, but after the first reboot, it hangs at the 'Preparing Automatic Repair' screen and then reboots again. We have attempted to boot into the BIOS and check the boot order, which appears correct. The SSD seems to be recognized. This is a critical issue as the user needs this laptop for an important presentation tomorrow. We need to diagnose if this is a hardware failure (e.g., bad RAM or SSD) or a corrupted OS image.",
+      "creation_timestamp": 1757829000
+    },
+    {
+      "ticket_id": "TKT-2025-005",
+      "title": "Employee unable to log into HR portal using SSO",
+      "description": "An employee, who was recently hired, cannot log into our HR portal. The portal uses a Single Sign-On (SSO) integration with our Active Directory. Other employees can log in without any issue. The user is able to log into other services using their AD credentials. The error message on the HR portal is 'Error 403: Forbidden - SAML token not valid'. This suggests a problem with the user's account permissions or a configuration issue on the SSO provider side. We need to check their AD group memberships and the SSO application logs to pinpoint the exact cause.",
+      "creation_timestamp": 1757829500
+    },
+    {
+      "ticket_id": "TKT-2025-006",
+      "title": "Slow performance of main database server",
+      "description": "The main production database server (SQL Server) is experiencing extremely slow query execution times, causing delays across all business applications. The issue started this morning and is worsening. Monitoring tools show high CPU utilization and I/O wait times. A quick check reveals no new large queries or recent schema changes. This could be a resource contention issue, poor query optimization, or a hardware problem with the storage array. This is a business-critical issue that requires immediate attention.",
+      "creation_timestamp": 1757830000
+    },
+    {
+      "ticket_id": "TKT-2025-007",
+      "title": "Corporate printer in marketing department not printing",
+      "description": "The shared network printer located in the Marketing department is not responding to any print jobs. Users can see the printer in the network list but jobs sent to it are stuck in the print queue on their computers with an error status. We've tried power cycling the printer and checking the network cable. The printer's IP address is reachable, but the web interface is unresponsive. This is a new printer model and may have a configuration issue or a driver problem.",
+      "creation_timestamp": 1757830500
+    },
+    {
+      "ticket_id": "TKT-2025-008",
+      "title": "User account locked due to suspicious login attempts",
+      "description": "An employee's Active Directory account has been locked. The user reported receiving multiple account lockout notifications on their phone. A review of the security logs indicates a high volume of failed login attempts from an unknown IP address, suggesting a potential brute-force attack. We need to investigate the source of the attack, clear the account lockout, and advise the user to change their password immediately. The account must be unlocked securely without further risk.",
+      "creation_timestamp": 1757831000
+    },
+    {
+      "ticket_id": "TKT-2025-009",
+      "title": "New employee laptop setup request",
+      "description": "Please prepare a new laptop for an incoming employee. The laptop needs to be configured with the standard corporate image, which includes Windows 11 Enterprise, Microsoft 365 suite, and standard security software. The user will require access to the shared HR drive and general network resources. The new employee starts next Monday, so this task has a clear deadline but is not urgent at this moment. The laptop model is a Dell Latitude 7420.",
+      "creation_timestamp": 1757831500
+    },
+    {
+      "ticket_id": "TKT-2025-010",
+      "title": "External website hosted on Azure is unreachable",
+      "description": "Our main corporate website, hosted on an Azure App Service, is showing a '503 Service Unavailable' error. We have checked the Azure portal, and the service appears to be running, but we cannot access the site from any location. There were no recent deployments or configuration changes. This could be an issue with the underlying infrastructure, a misconfigured security group, or a problem with the web server itself. This is a public-facing website and its downtime is affecting brand reputation.",
+      "creation_timestamp": 1757832000
+    },
+    {
+      "ticket_id": "TKT-2025-011",
+      "title": "Phishing email reported by employee",
+      "description": "An employee received a suspicious email impersonating our CEO asking for sensitive company information. The user recognized it as a phishing attempt and forwarded it to our security team. We need to analyze the email headers and content to determine its origin, block the sender, and run a company-wide scan to check if any other employees have received similar emails. This is a high-priority security issue that requires immediate action to prevent a data breach.",
+      "creation_timestamp": 1757832500
+    },
+    {
+      "ticket_id": "TKT-2025-012",
+      "title": "Samba share access issue on new macOS Big Sur",
+      "description": "A user with a new MacBook running macOS Big Sur cannot connect to a long-standing Samba network share. All other users on Windows and older macOS versions can connect without issues. The user receives a 'The server may not exist or is currently unavailable' error. This seems to be a compatibility issue with the new macOS version and the older Samba server configuration. We need to check the Samba logs and potentially update the configuration to support newer clients.",
+      "creation_timestamp": 1757833000
+    },
+    {
+      "ticket_id": "TKT-2025-013",
+      "title": "Request for a new user account on the Jenkins server",
+      "description": "A new developer requires an account on our Jenkins CI/CD server with read-only access to a specific project. Please create the user account and assign the correct permissions. This is a standard request and can be handled during normal business hours. The user's name is Mark Davis and his email is mark.davis@company.com.",
+      "creation_timestamp": 1757833500
+    },
+    {
+      "ticket_id": "TKT-2025-014",
+      "title": "Black screen with blinking cursor on desktop PC",
+      "description": "A user's desktop PC boots up to a black screen with a blinking cursor in the top-left corner. The POST screen appears normally, but the OS (Windows 10) fails to load. This suggests a problem with the boot loader or the main OS partition. The user has critical data on the drive that needs to be recovered before any reinstallation attempt. We need to diagnose the boot issue and assess the data recovery options.",
+      "creation_timestamp": 1757834000
+    },
+    {
+      "ticket_id": "TKT-2025-015",
+      "title": "Firewall ruleset change request for new application",
+      "description": "The development team requires a new firewall rule to allow inbound traffic on port 8443 for a new application. The traffic should be allowed from a specific set of external IP addresses. This is a standard change request and should be reviewed by the security team before implementation. We need to create a new rule on the perimeter firewall and test the connectivity after the change.",
+      "creation_timestamp": 1757834500
+    },
+    {
+      "ticket_id": "TKT-2025-016",
+      "title": "Application XYZ is not connecting to the database on the production server",
+      "description": "The front-end application is unable to establish a connection to its backend SQL database. The application error logs show 'Connection Timeout' errors. The database server is up and running, and we can connect to it using a management tool from the same server. This suggests a network connectivity or firewall issue between the application server and the database server. This is impacting business operations and needs to be resolved urgently.",
+      "creation_timestamp": 1757835000
+    },
+    {
+      "ticket_id": "TKT-2025-017",
+      "title": "Request for access to new SharePoint site",
+      "description": "A new project team requires access to a newly created SharePoint Online site for collaboration. We need to create a new group in SharePoint and add all the team members to it, granting them 'Contribute' permissions. This is a low-urgency request and can be completed as part of routine access management. The team lead is Sarah Miller.",
+      "creation_timestamp": 1757835500
+    },
+    {
+      "ticket_id": "TKT-2025-018",
+      "title": "Laptop fan making loud grinding noise",
+      "description": "The fan on a user's company laptop is making a loud grinding noise, and the laptop is starting to feel unusually hot to the touch. This could be an indication of a failing fan bearing or a clogged fan. Continued use could lead to thermal throttling and eventual hardware damage. The laptop needs to be brought in for hardware diagnostics and possible fan replacement. This is an escalating issue and requires a quick response to prevent further damage.",
+      "creation_timestamp": 1757836000
+    },
+    {
+      "ticket_id": "TKT-2025-019",
+      "title": "Network outage in Building C",
+      "description": "All network connectivity in Building C has been lost. Users are unable to access internal resources, and VoIP phones are down. The issue seems to be localized to the main network switch in the server room of that building. Pinging the switch's management IP is failing. We need to physically check the switch, its power supply, and network connections. This is a major outage and is a critical incident.",
+      "creation_timestamp": 1757836500
+    },
+    {
+      "ticket_id": "TKT-2025-020",
+      "title": "Can't install new software from Windows Store for Business",
+      "description": "A user is attempting to install a specific application from the company's Windows Store for Business, but the installation fails with error code 0x80070005. This error usually indicates a permissions issue or a problem with the user's account configuration. We need to verify the user's permissions and group policies to ensure they have the necessary rights to install applications. This is a low-priority issue.",
+      "creation_timestamp": 1757837000
+    },
+    {
+      "ticket_id": "TKT-2025-021",
+      "title": "Request for a new domain user account",
+      "description": "Please create a new Active Directory user account for a new marketing intern. The user needs to be part of the 'Marketing' and 'General Users' security groups. We will also need an email mailbox to be created for this user. This is a standard request and can be handled during business hours.",
+      "creation_timestamp": 1757837500
+    },
+    {
+      "ticket_id": "TKT-2025-022",
+      "title": "Desktop monitor keeps flickering and turning off",
+      "description": "A user's desktop monitor is flickering sporadically and sometimes completely loses signal, turning black. This happens seemingly at random intervals. We have already tried swapping the HDMI cable and testing a different port on the graphics card, but the issue persists. This points to either a faulty monitor or a problem with the graphics card itself. The user needs a quick diagnosis to avoid eye strain and get back to work.",
+      "creation_timestamp": 1757838000
+    },
+    {
+      "ticket_id": "TKT-2025-023",
+      "title": "Website login page redirecting to 404 error",
+      "description": "Our public-facing website's login page is now redirecting to a '404 Page Not Found' error. This is a recent issue and no changes were made to the web server configuration. This could be due to a change in the application code, a misconfiguration in the web server's URL rewrite rules, or a recent update to the CMS. This is a critical issue as users cannot log in to their accounts.",
+      "creation_timestamp": 1757838500
+    },
+    {
+      "ticket_id": "TKT-2025-024",
+      "title": "VoIP phone not registering with network",
+      "description": "A user's desk phone (VoIP) is showing an 'Unregistered' status. It has a network connection and has a valid IP address from the DHCP server, but it's not connecting to the corporate phone system. We need to check the network connectivity, port configuration on the switch, and the phone system's registration logs. This is preventing the user from receiving and making calls.",
+      "creation_timestamp": 1757839000
+    },
+    {
+      "ticket_id": "TKT-2025-025",
+      "title": "User reports unauthorized access to their OneDrive",
+      "description": "An employee received an email alert from Microsoft 365 regarding an unusual sign-in to their OneDrive from an unrecognized IP address. We need to investigate the sign-in logs, check for any file modifications, and immediately force a password reset for the user's account. This is a serious security incident and requires immediate action to mitigate any potential data compromise.",
+      "creation_timestamp": 1757839500
+    },
+    {
+      "ticket_id": "TKT-2025-026",
+      "title": "Slow network performance in the R&D department",
+      "description": "Multiple users in the R&D department are reporting very slow network speeds, especially when accessing large files from the network-attached storage (NAS). Pings to the NAS are showing high latency and some packet loss. This could be due to a faulty network switch, a congested link, or a problem with the NAS itself. This is a high-priority issue as it's affecting a large number of users and their work.",
+      "creation_timestamp": 1757840000
+    },
+    {
+      "ticket_id": "TKT-2025-027",
+      "title": "Can't share files from a new SharePoint library",
+      "description": "A user who is a site owner on a new SharePoint Online site is unable to share files externally with a partner. The sharing option is greyed out. We need to verify if the external sharing settings are enabled for this specific site collection and if there are any tenant-level restrictions preventing this action. This is a medium-priority issue as it is preventing project collaboration.",
+      "creation_timestamp": 1757840500
+    },
+    {
+      "ticket_id": "TKT-2025-028",
+      "title": "User cannot log into their desktop computer",
+      "description": "A user is unable to log in to their Windows 10 desktop computer. They are entering the correct password but are getting an 'The user profile service failed the sign-in' error. This indicates a corrupted user profile. We will need to try to repair the profile or, if that fails, create a new profile and migrate the user's data. This is a high-priority issue as the user is completely locked out of their PC.",
+      "creation_timestamp": 1757841000
+    },
+    {
+      "ticket_id": "TKT-2025-029",
+      "title": "Malware detected on an employee's laptop",
+      "description": "Our endpoint security system has alerted us to a malware infection on an employee's laptop. The malware is classified as a 'Trojan'. The system has already quarantined the malicious file, but we need to perform a full system scan, check for any further signs of compromise, and ensure the device is completely clean before returning it to the user. This is a critical security incident that needs immediate attention.",
+      "creation_timestamp": 1757841500
+    },
+    {
+      "ticket_id": "TKT-2025-030",
+      "title": "New laptop requires memory upgrade",
+      "description": "A developer's new laptop is not meeting the performance requirements for their work. They are running resource-intensive applications and require a memory upgrade from 16GB to 32GB. This is a standard hardware upgrade request. We need to order the correct memory modules and schedule a time with the user to perform the upgrade. This is a low-priority task.",
+      "creation_timestamp": 1757842000
+    },
+    {
+      "ticket_id": "TKT-2025-031",
+      "title": "Company website DNS records not propagating",
+      "description": "We recently updated the DNS records for our company website to point to a new IP address, but the changes are not propagating correctly. Some users are still being directed to the old server. We need to check the DNS settings with our domain registrar and ensure the TTL values are low enough for a quick propagation. This is affecting public access to our website and is a high-priority issue.",
+      "creation_timestamp": 1757842500
+    },
+    {
+      "ticket_id": "TKT-2025-032",
+      "title": "JIRA software migration from on-prem to Cloud",
+      "description": "We are planning to migrate our on-premise JIRA instance to the Atlassian Cloud. This is a major project that involves data migration, user account synchronization, and reconfiguring various integrations. We need a team to plan and execute this migration over the next few weeks. This is a low-urgency, long-term project that requires specific expertise in JIRA and cloud migrations.",
+      "creation_timestamp": 1757843000
+    },
+    {
+      "ticket_id": "TKT-2025-033",
+      "title": "Employee needs temporary access to a critical system",
+      "description": "An employee needs temporary, elevated access to a production server to perform a critical maintenance task. The access should be granted for a limited time (4 hours) and then automatically revoked. We need to create a temporary account or use a privilege escalation tool to grant this access securely. This is a high-priority access request due to the nature of the task.",
+      "creation_timestamp": 1757843500
+    },
+    {
+      "ticket_id": "TKT-2025-034",
+      "title": "The projector in Conference Room B is not working",
+      "description": "The projector in Conference Room B is not turning on. It is connected to power, but when we press the power button, nothing happens. We've tried a different power outlet, but that didn't help. This is likely a hardware failure with the projector itself or the power supply. A meeting is scheduled for this room in an hour, so this is an urgent issue.",
+      "creation_timestamp": 1757844000
+    },
+    {
+      "ticket_id": "TKT-2025-035",
+      "title": "Server room temperature alarm triggered",
+      "description": "The server room monitoring system has triggered an alarm for high temperature. The current temperature is 30\u00b0C and rising. This could indicate a failure of one of the cooling units (AC). We need to immediately check the server room, diagnose the issue, and take corrective action to prevent server overheating and shutdowns. This is a critical infrastructure issue.",
+      "creation_timestamp": 1757844500
+    },
+    {
+      "ticket_id": "TKT-2025-036",
+      "title": "Employee needs a new account for Salesforce CRM",
+      "description": "A new sales team member requires a new user account on our Salesforce CRM platform. The user needs 'Sales User' permissions and should be assigned to the 'North America' region. This is a standard onboarding request and has low urgency.",
+      "creation_timestamp": 1757845000
+    },
+    {
+      "ticket_id": "TKT-2025-037",
+      "title": "Outlook Calendar not syncing with mobile device",
+      "description": "A user's Outlook calendar is not syncing properly with their company-provided iPhone. Events created on the desktop app do not appear on the mobile device, and vice versa. We have already tried restarting both devices and reinstalling the Outlook app on the phone. This might be an issue with the Exchange server or the mobile device management (MDM) policy. This is a medium-priority issue.",
+      "creation_timestamp": 1757845500
+    },
+    {
+      "ticket_id": "TKT-2025-038",
+      "title": "Server running out of disk space",
+      "description": "The 'C' drive on a critical file server is running dangerously low on disk space (less than 5% free). This is causing performance degradation and could lead to system instability. We need to identify large, unnecessary files and either archive or delete them to free up space. This is a high-priority issue that needs to be addressed before the server crashes.",
+      "creation_timestamp": 1757846000
+    },
+    {
+      "ticket_id": "TKT-2025-039",
+      "title": "User cannot log into their account on an old legacy application",
+      "description": "A user is unable to log in to an old, legacy application that uses a local database for authentication. The 'Forgot Password' feature is not working. The user's account might be corrupted or locked. We need to manually reset the user's password in the application's database. This is a low-priority issue but requires access to a specific database.",
+      "creation_timestamp": 1757846500
+    },
+    {
+      "ticket_id": "TKT-2025-040",
+      "title": "Broken USB-C port on a laptop",
+      "description": "A user's laptop has a physically broken USB-C port. The port is loose and does not consistently connect with external devices. The laptop is still under warranty. We need to get a replacement and transfer the user's data to it. The broken port is preventing the user from charging their device and connecting a monitor, making this a high-priority hardware issue.",
+      "creation_timestamp": 1757847000
+    },
+    {
+      "ticket_id": "TKT-2025-041",
+      "title": "Corporate antivirus software not updating definitions",
+      "description": "Several employees have reported that their corporate antivirus software is showing an 'outdated' status and is not updating its virus definitions. A check of the management console confirms that these devices have not received updates in over 72 hours. This could be a connectivity issue with the update server or a problem with the endpoint clients themselves. This is a high-priority security issue.",
+      "creation_timestamp": 1757847500
+    },
+    {
+      "ticket_id": "TKT-2025-042",
+      "title": "Website showing '502 Bad Gateway' error",
+      "description": "Our e-commerce website is intermittently showing a '502 Bad Gateway' error. This indicates that the web server is receiving an invalid response from an upstream server (e.g., the application server or a reverse proxy). This is affecting our sales and is a critical business issue. We need to analyze the web server logs and the application's backend to find the cause of the bad response.",
+      "creation_timestamp": 1757848000
+    },
+    {
+      "ticket_id": "TKT-2025-043",
+      "title": "User cannot find a specific file on the shared drive",
+      "description": "A user is unable to locate a specific file on a shared network drive. The user claims they saved the file there yesterday. We need to check if the file was moved, renamed, or accidentally deleted. We may need to check the file's permissions to ensure the user has the necessary access rights. This is a low-priority request.",
+      "creation_timestamp": 1757848500
+    },
+    {
+      "ticket_id": "TKT-2025-044",
+      "title": "External monitor not detected by laptop",
+      "description": "An employee's external monitor is not being detected by their laptop. We have tried a different HDMI cable and a different monitor, but the issue persists. This points to a problem with the laptop's display port or the graphics driver. The user needs to use dual monitors for their work, so this is a medium-priority issue.",
+      "creation_timestamp": 1757849000
+    },
+    {
+      "ticket_id": "TKT-2025-045",
+      "title": "New employee requires email setup on mobile phone",
+      "description": "A new employee needs help setting up their company email on their personal mobile device. The device is a Samsung Galaxy S21. They have already installed the Outlook app but are having trouble with the configuration. We need to guide them through the setup process, ensuring that the MDM policy is correctly applied. This is a low-priority issue.",
+      "creation_timestamp": 1757849500
+    },
+    {
+      "ticket_id": "TKT-2025-046",
+      "title": "Failed attempt to connect to a new VPN endpoint",
+      "description": "A user is trying to connect to a new VPN endpoint but is receiving a 'Authentication Failed' error. Their credentials are correct. This suggests a problem with the user's account on the VPN server, or a misconfigured setting on the endpoint itself. We need to check the user's permissions and the VPN server logs to diagnose the problem. This is a medium-priority issue.",
+      "creation_timestamp": 1757850000
+    },
+    {
+      "ticket_id": "TKT-2025-047",
+      "title": "Employee needs a new license for Adobe Creative Cloud",
+      "description": "An employee in the marketing department requires a new license for Adobe Creative Cloud for a new project. We need to purchase and assign a license to their account. The request has been approved by their manager. This is a standard request and has a low urgency.",
+      "creation_timestamp": 1757850500
+    },
+    {
+      "ticket_id": "TKT-2025-048",
+      "title": "Request to reset password for a service account",
+      "description": "A service account password needs to be reset on a production server. This is a standard security practice. We need to generate a new strong password, update it on the server, and ensure all scheduled tasks or services using this account are updated to use the new password. This is a high-priority task due to its security implications.",
+      "creation_timestamp": 1757851000
+    },
+    {
+      "ticket_id": "TKT-2025-049",
+      "title": "Desktop computer not turning on",
+      "description": "A user's desktop computer is completely unresponsive. When they press the power button, there is no light, no sound, and nothing on the screen. This suggests a power supply unit (PSU) failure or a problem with the motherboard. The user cannot work, so this is a critical hardware issue that needs immediate attention.",
+      "creation_timestamp": 1757851500
+    },
+    {
+      "ticket_id": "TKT-2025-050",
+      "title": "SQL Server database backup failing",
+      "description": "The nightly automated backup of our main SQL Server production database has been failing for the past three days. The error message in the logs indicates 'Insufficient permissions to access backup destination'. This could be a problem with the service account credentials or a change in the network share's permissions. This is a critical issue as we are at risk of data loss. We need to fix the backup process immediately.",
+      "creation_timestamp": 1757852000
+    },
+    {
+      "ticket_id": "TKT-2025-051",
+      "title": "User cannot log into a website using SAML SSO",
+      "description": "A user is unable to log in to an external SaaS application that uses SAML SSO with our identity provider (IdP). The IdP logs show a successful authentication, but the external application returns an error. This points to a problem with the SAML assertion, possibly a misconfigured attribute mapping or an issue with the application's service provider configuration. This is a medium-priority access issue.",
+      "creation_timestamp": 1757852500
+    },
+    {
+      "ticket_id": "TKT-2025-052",
+      "title": "Router in a branch office is offline",
+      "description": "The main router in our branch office in London is no longer responding to pings and appears to be offline. This has cut off all network connectivity for that office. We need to check the status of the device, and if a remote fix is not possible, we will need to dispatch a technician to the site. This is a critical network outage.",
+      "creation_timestamp": 1757853000
+    },
+    {
+      "ticket_id": "TKT-2025-053",
+      "title": "New employee requires Linux development environment setup",
+      "description": "A new software engineer requires a Linux-based development environment. We need to provision a virtual machine (VM) with Ubuntu, install development tools (Docker, Git), and grant access to the corporate code repositories. This is a standard onboarding request and has a low urgency.",
+      "creation_timestamp": 1757853500
+    },
+    {
+      "ticket_id": "TKT-2025-054",
+      "title": "Network drive mapping not working for new hires",
+      "description": "New employees are unable to see the departmental network drives mapped automatically upon login. Existing employees' drive mappings are working fine. This suggests an issue with the group policy that handles drive mappings or a problem with the Active Directory security groups. This is a medium-priority issue affecting new users.",
+      "creation_timestamp": 1757854000
+    },
+    {
+      "ticket_id": "TKT-2025-055",
+      "title": "Laptop battery not holding charge",
+      "description": "A user's laptop battery is draining very quickly, and the system reports 'Battery Health: Poor'. The user needs to keep the laptop plugged in constantly. This is a classic battery degradation issue. We need to order a replacement battery and schedule a time for the replacement. This is a medium-priority hardware issue.",
+      "creation_timestamp": 1757854500
+    },
+    {
+      "ticket_id": "TKT-2025-056",
+      "title": "User's desktop is displaying 'Endpoint not compliant' error",
+      "description": "A user's desktop is showing an 'Endpoint not compliant' error from our mobile device management (MDM) system. This is preventing them from accessing corporate resources. The user reports they have not made any changes. This could be due to a failed security update, a change in MDM policy, or a rogue application. We need to diagnose the compliance issue and resolve it. This is a high-priority security issue.",
+      "creation_timestamp": 1757855000
+    },
+    {
+      "ticket_id": "TKT-2025-057",
+      "title": "Unable to connect to shared folders on a new server",
+      "description": "Users are unable to connect to shared folders on a newly deployed file server. They are receiving a 'Network Path Not Found' error. The server is on the network and responding to pings. This is likely a problem with the SMB protocol configuration or firewall rules on the new server. This is a high-priority issue as it's preventing a new project team from working.",
+      "creation_timestamp": 1757855500
+    },
+    {
+      "ticket_id": "TKT-2025-058",
+      "title": "Password reset required for a user account",
+      "description": "A user has forgotten their Active Directory password and needs a manual reset. We need to generate a new temporary password and communicate it securely to the user. This is a standard low-urgency request.",
+      "creation_timestamp": 1757856000
+    },
+    {
+      "ticket_id": "TKT-2025-059",
+      "title": "Company's public website is down",
+      "description": "Our main public website is completely unresponsive and showing a 'This site can't be reached' error. Pinging the domain name is failing. This suggests a major issue with the web server, DNS, or network infrastructure. This is a business-critical issue that needs immediate attention.",
+      "creation_timestamp": 1757856500
+    },
+    {
+      "ticket_id": "TKT-2025-060",
+      "title": "User's laptop is extremely slow",
+      "description": "A user's laptop is experiencing extreme slowness. Opening applications, browsing the web, and even basic tasks are taking a long time. The user reports a recent surge in pop-up ads, which suggests a possible adware or spyware infection. We need to scan the laptop for malware and clean it up. This is a medium-priority issue.",
+      "creation_timestamp": 1757857000
+    },
+    {
+      "ticket_id": "TKT-2025-061",
+      "title": "Server log reports suspicious login attempts",
+      "description": "The security information and event management (SIEM) system has flagged multiple failed login attempts from a public IP address on a production server. The attempts are for a non-existent user account. This is a potential brute-force attack. We need to investigate and block the malicious IP address on the firewall. This is a high-priority security issue.",
+      "creation_timestamp": 1757857500
+    },
+    {
+      "ticket_id": "TKT-2025-062",
+      "title": "Employee needs a new license for Visio Professional",
+      "description": "A new project manager requires a license for Microsoft Visio Professional. We need to check license availability and assign a new license to their account. This is a standard low-urgency request.",
+      "creation_timestamp": 1757858000
+    },
+    {
+      "ticket_id": "TKT-2025-063",
+      "title": "Physical damage to a server rack in the data center",
+      "description": "A technician accidentally bumped into a server rack in the data center, causing some cables to become loose. The rack and the servers appear to be physically fine, but we need to re-cable the rack and ensure all connections are secure. This is a high-priority hardware task to prevent any service interruptions.",
+      "creation_timestamp": 1757858500
+    },
+    {
+      "ticket_id": "TKT-2025-064",
+      "title": "User cannot connect to a specific Wi-Fi network",
+      "description": "A user is unable to connect to the 'Guest' Wi-Fi network. They are entering the correct password, but the connection attempt fails. They can connect to the 'Corporate' network without an issue. This could be an issue with the user's device settings or a problem with the guest Wi-Fi access point configuration. This is a low-priority issue.",
+      "creation_timestamp": 1757859000
+    },
+    {
+      "ticket_id": "TKT-2025-065",
+      "title": "Employee terminated, needs account de-provisioning",
+      "description": "An employee has been terminated. We need to immediately de-provision their user account across all corporate systems, including Active Directory, Microsoft 365, and any other SaaS applications. This is a critical security task to prevent unauthorized access. The user's name is James Taylor.",
+      "creation_timestamp": 1757859500
+    },
+    {
+      "ticket_id": "TKT-2025-066",
+      "title": "User cannot open a specific application",
+      "description": "A user is unable to open a specific application (AutoCAD). When they double-click the icon, nothing happens. There are no error messages. We have tried reinstalling the software. This might be a problem with a corrupted registry entry or a conflict with another application. This is a high-priority issue as it is preventing the user from working.",
+      "creation_timestamp": 1757860000
+    },
+    {
+      "ticket_id": "TKT-2025-067",
+      "title": "Request for a new security group in Active Directory",
+      "description": "The HR department requires a new security group in Active Directory named 'HR-Managers'. This group needs to be granted access to a specific file share. This is a standard low-urgency request.",
+      "creation_timestamp": 1757860500
+    },
+    {
+      "ticket_id": "TKT-2025-068",
+      "title": "Desktop PC making a high-pitched noise",
+      "description": "A user's desktop PC is making a continuous high-pitched whining noise. The noise is constant and not related to the fan speed. This could be a failing power supply or a capacitor on the motherboard. This is a medium-priority hardware issue that needs to be addressed before a component fails.",
+      "creation_timestamp": 1757861000
+    },
+    {
+      "ticket_id": "TKT-2025-069",
+      "title": "Corporate website is blocked by a public firewall",
+      "description": "Our public-facing website is being blocked by a firewall for a major customer's network. The customer is reporting an 'Access Denied' error. We need to investigate if our IP address or domain name has been flagged as malicious. This is a critical business issue and requires immediate attention.",
+      "creation_timestamp": 1757861500
+    },
+    {
+      "ticket_id": "TKT-2025-070",
+      "title": "User's laptop screen is cracked",
+      "description": "A user has reported that their laptop screen is cracked, making it difficult to read and work. The laptop is still under warranty, but the damage is physical and may not be covered. We need to get a quote for the screen replacement and schedule the repair. The user can still work with an external monitor, so this is a low-priority hardware issue.",
+      "creation_timestamp": 1757862000
+    },
+    {
+      "ticket_id": "TKT-2025-071",
+      "title": "Unable to log in to Microsoft Teams after password change",
+      "description": "An employee recently changed their Active Directory password, and now they cannot log in to Microsoft Teams on their desktop client. The client is showing a 'We couldn't sign you in' error. We have tried clearing the Teams cache, but the issue persists. This is likely a token or credential sync issue. The user can still access Teams via the web, so this is a medium-priority issue.",
+      "creation_timestamp": 1757862500
+    },
+    {
+      "ticket_id": "TKT-2025-072",
+      "title": "Unauthorized access to a shared folder",
+      "description": "An employee has reported that they were able to access a shared folder that they should not have permissions for. We need to immediately investigate the permissions on the folder, remove the unauthorized access, and check the audit logs to see if any files were accessed or modified. This is a high-priority security issue.",
+      "creation_timestamp": 1757863000
+    },
+    {
+      "ticket_id": "TKT-2025-073",
+      "title": "Cloud cost optimization request",
+      "description": "Our DevOps team has requested a review of our current cloud infrastructure to identify opportunities for cost optimization. This involves analyzing resource utilization, identifying idle resources, and recommending more cost-effective solutions. This is a long-term, low-urgency project that requires expertise in cloud architecture.",
+      "creation_timestamp": 1757863500
+    },
+    {
+      "ticket_id": "TKT-2025-074",
+      "title": "Failed attempt to connect to a new printer",
+      "description": "A user is unable to connect to a new network printer that was recently installed. They have the correct IP address and driver, but the printer is not showing up in their list of available printers. This could be a firewall issue on the user's PC or a network configuration problem. This is a low-priority issue.",
+      "creation_timestamp": 1757864000
+    },
+    {
+      "ticket_id": "TKT-2025-075",
+      "title": "Corporate website is loading very slowly",
+      "description": "Our public-facing website is loading extremely slowly, with page load times of over 10 seconds. We have checked the server's CPU and memory, and they appear to be normal. This could be a problem with the website's code, a database performance issue, or a problem with the web server's configuration. This is a critical business issue and needs immediate attention.",
+      "creation_timestamp": 1757864500
+    },
+    {
+      "ticket_id": "TKT-2025-076",
+      "title": "User cannot create a new team in Microsoft Teams",
+      "description": "A user who should be able to create new teams in Microsoft Teams is getting an 'You don't have permission to create a team' error. This could be due to a change in their M365 license or a change in the Teams admin settings. We need to verify their permissions and grant them the necessary rights. This is a low-priority issue.",
+      "creation_timestamp": 1757865000
+    },
+    {
+      "ticket_id": "TKT-2025-077",
+      "title": "Server security patch deployment failure",
+      "description": "The automated security patch deployment on a group of production servers failed last night. The error logs show a problem with the Windows Update service on these servers. This is a high-priority security issue as the servers are now vulnerable. We need to manually diagnose and fix the update service on each server.",
+      "creation_timestamp": 1757865500
+    },
+    {
+      "ticket_id": "TKT-2025-078",
+      "title": "Broken keyboard on a laptop",
+      "description": "A user's laptop keyboard has a few non-functional keys (the 'E' and 'R' keys are not working). This is a hardware issue that requires a keyboard replacement. We need to order a new keyboard and schedule a time with the user for the replacement. This is a low-priority hardware issue.",
+      "creation_timestamp": 1757866000
+    },
+    {
+      "ticket_id": "TKT-2025-079",
+      "title": "Cannot send emails from an application using a relay",
+      "description": "A custom application is unable to send automated emails using our corporate email relay server. The application logs show 'Relay Access Denied' errors. This could be a problem with the application's IP address not being whitelisted on the email relay server. This is a medium-priority software issue.",
+      "creation_timestamp": 1757866500
+    },
+    {
+      "ticket_id": "TKT-2025-080",
+      "title": "Request for a new user account for a contractor",
+      "description": "A contractor requires a temporary user account on our network for a three-month project. The account should be automatically disabled after 90 days. The user needs access to a specific shared project folder. This is a standard low-urgency access request.",
+      "creation_timestamp": 1757867000
+    },
+    {
+      "ticket_id": "TKT-2025-081",
+      "title": "Network switch in Building A is not responding",
+      "description": "The main network switch in Building A has stopped responding to pings and appears to be offline. This has caused a complete network outage for the entire building. We need to physically inspect the switch, check its power status, and diagnose the issue. This is a critical network outage and needs immediate attention.",
+      "creation_timestamp": 1757867500
+    },
+    {
+      "ticket_id": "TKT-2025-082",
+      "title": "User's laptop keyboard is typing the wrong characters",
+      "description": "A user's laptop keyboard is typing incorrect characters. For example, when they press 'a', it types 's', and when they press 's', it types 'd'. This is likely a problem with a corrupted keyboard driver or a language setting. We need to check the driver and the regional settings. This is a medium-priority software issue.",
+      "creation_timestamp": 1757868000
+    },
+    {
+      "ticket_id": "TKT-2025-083",
+      "title": "Request for access to new database table",
+      "description": "A developer requires read-only access to a new table in the production database for a reporting project. We need to grant them the necessary permissions in the database. This is a low-urgency access request.",
+      "creation_timestamp": 1757868500
+    },
+    {
+      "ticket_id": "TKT-2025-084",
+      "title": "USB port on a desktop PC not working",
+      "description": "A user's desktop PC has a USB port on the front panel that is not working. We have tried a different USB device, but the issue persists. This is likely a problem with the port itself or a loose connection to the motherboard. This is a low-priority hardware issue.",
+      "creation_timestamp": 1757869000
+    },
+    {
+      "ticket_id": "TKT-2025-085",
+      "title": "Suspected breach of a network segment",
+      "description": "Our intrusion detection system (IDS) has flagged a high volume of suspicious network traffic on a specific network segment. The traffic appears to be a lateral movement attempt. We need to immediately isolate the affected segment, investigate the source of the traffic, and perform a full forensic analysis. This is a critical security incident and requires immediate action.",
+      "creation_timestamp": 1757869500
+    },
+    {
+      "ticket_id": "TKT-2025-086",
+      "title": "Company blog is showing outdated content",
+      "description": "The company blog is showing old, outdated content. The content management system (CMS) is showing the new content, but it's not appearing on the public-facing website. This could be a problem with the website's cache or the CMS's synchronization with the front end. This is a medium-priority issue.",
+      "creation_timestamp": 1757870000
+    },
+    {
+      "ticket_id": "TKT-2025-087",
+      "title": "Request to add new user to a mailing list",
+      "description": "A new employee needs to be added to a corporate mailing list. This is a standard low-urgency request.",
+      "creation_timestamp": 1757870500
+    },
+    {
+      "ticket_id": "TKT-2025-088",
+      "title": "Laptop is randomly restarting",
+      "description": "A user's laptop is randomly restarting without any warning. There is no blue screen of death (BSOD). This could be a problem with overheating, a failing power supply, or a driver issue. We need to diagnose the cause to prevent data loss. This is a high-priority hardware issue.",
+      "creation_timestamp": 1757871000
+    },
+    {
+      "ticket_id": "TKT-2025-089",
+      "title": "Wi-Fi is not working in Conference Room C",
+      "description": "The Wi-Fi network in Conference Room C is not working. Users can connect to the access point, but they cannot get an IP address or access the internet. This could be an issue with the DHCP server or the access point's configuration. This is a high-priority network issue as a meeting is about to start.",
+      "creation_timestamp": 1757871500
+    },
+    {
+      "ticket_id": "TKT-2025-090",
+      "title": "Employee needs a new license for Tableau",
+      "description": "A new data analyst requires a new license for Tableau Desktop. The request has been approved by their manager. We need to purchase and assign a license to their account. This is a standard low-urgency request.",
+      "creation_timestamp": 1757872000
+    },
+    {
+      "ticket_id": "TKT-2025-091",
+      "title": "Server log reports high CPU utilization",
+      "description": "The monitoring system has flagged a production server for high CPU utilization (consistently above 95%). A quick check shows a rogue process consuming most of the CPU. This could be due to a misconfigured application, a runaway script, or a malware infection. We need to investigate and terminate the process. This is a high-priority issue.",
+      "creation_timestamp": 1757872500
+    },
+    {
+      "ticket_id": "TKT-2025-092",
+      "title": "User cannot connect to their shared drive on a new Mac",
+      "description": "A user with a new MacBook is unable to connect to a shared network drive. The network drive is a Windows SMB share. The user can see the share but cannot authenticate. This is a classic SMB compatibility issue. We need to check the SMB protocol version and the user's credentials. This is a medium-priority issue.",
+      "creation_timestamp": 1757873000
+    },
+    {
+      "ticket_id": "TKT-2025-093",
+      "title": "Laptop fan is not spinning",
+      "description": "A user's laptop fan is not spinning, and the laptop is starting to get very hot. The fan is completely unresponsive. This is a clear fan failure and needs to be addressed immediately to prevent the laptop from overheating and shutting down. This is a high-priority hardware issue.",
+      "creation_timestamp": 1757873500
+    },
+    {
+      "ticket_id": "TKT-2025-094",
+      "title": "User cannot find an email in their inbox",
+      "description": "A user is unable to find an important email that they know they received. They have checked their inbox, spam, and trash folders. This could be a problem with their mailbox or a potential issue with the email retention policy. We need to perform a search on the Exchange server to locate the missing email. This is a low-priority issue.",
+      "creation_timestamp": 1757874000
+    },
+    {
+      "ticket_id": "TKT-2025-095",
+      "title": "Request for a new user account for an intern",
+      "description": "An intern requires a temporary user account on our network for a three-month period. The account should be automatically disabled after 90 days. They need access to a specific shared project folder. This is a standard low-urgency access request.",
+      "creation_timestamp": 1757874500
+    },
+    {
+      "ticket_id": "TKT-2025-096",
+      "title": "Website showing 'Internal Server Error' 500",
+      "description": "Our public-facing website is showing an 'Internal Server Error' (500). This indicates a problem with the web server's application code or configuration. The error is preventing all users from accessing the site. This is a business-critical issue that needs immediate attention.",
+      "creation_timestamp": 1757875000
+    },
+    {
+      "ticket_id": "TKT-2025-097",
+      "title": "Suspected phishing attack targeting finance department",
+      "description": "Multiple employees in the finance department have reported receiving a highly-targeted phishing email. The email is a 'spear phishing' attack impersonating a senior executive asking for an urgent wire transfer. We need to immediately block the sender, warn the affected employees, and perform a full analysis of the email to see if any users were compromised. This is a critical security incident.",
+      "creation_timestamp": 1757875500
+    },
+    {
+      "ticket_id": "TKT-2025-098",
+      "title": "Laptop is not charging",
+      "description": "A user's laptop is not charging when plugged in. We have tried a different power adapter and a different power outlet, but the issue persists. This is likely a problem with the laptop's charging port or the internal charging circuit. The user needs to keep their laptop charged for work, so this is a high-priority hardware issue.",
+      "creation_timestamp": 1757876000
+    },
+    {
+      "ticket_id": "TKT-2025-099",
+      "title": "User cannot log in to a specific SaaS application",
+      "description": "An employee cannot log in to a specific SaaS application (e.g., Trello). The user's account appears to be correctly configured, and they can access other SaaS applications without any issue. This points to a problem with the application's configuration or a synchronization issue with our identity provider. This is a medium-priority access issue.",
+      "creation_timestamp": 1757876500
+    },
+    {
+      "ticket_id": "TKT-2025-100",
+      "title": "Network printer is printing garbled text",
+      "description": "The network printer in the finance department is printing garbled text and random symbols. This happens with multiple users and multiple documents. This is likely a problem with the printer driver or a firmware issue. This is a low-priority issue as the users can print to other printers.",
+      "creation_timestamp": 1757877000
+    }
+  ]
+}
+
+--- File: README.md ---
+# PyCon25 Hackathon: Intelligent Support Ticket Assignment System
+
+Welcome to the PyCon25 Hackathon project! 🚀
+
+Once you are done with the hackathon, share your github link here: https://forms.gle/gnR62EoZUfeA8zqJ9
+
+## 📋 Project Overview
+
+### Problem Statement
+
+In a helpdesk system, when customers raise support issues about different topics, we should ideally route tickets to agents who have knowledge and experience in solving that particular set of problems. However:
+
+- **Volume Imbalance**: Not all topics have equal request volumes
+- **Skill Gaps**: Not all agents have expertise in all areas
+- **Fair Distribution**: Workload needs to be distributed equitably
+- **Effective Resolution**: Tickets should go to the most capable agents
+
+### Challenge
+
+Build an optimal routing system that assigns support tickets to the best possible agent while ensuring:
+- ✅ Maximum likelihood of successful resolution
+- ✅ Fair distribution of workload across agents
+- ✅ Effective prioritization of issues
+- ✅ Cost-effective and scalable approach
+
+## 📊 Data Structure
+
+### Input: `dataset.json`
+Contains two main sections:
+- **Agents**: Support staff with skills, availability, and experience levels
+- **Tickets**: Support requests with descriptions and timestamps
+
+### Output: `output_result.json`
+Your solution should generate ticket assignments with the following fields:
+
+- **Mandatory:**
+   - Ticket ID
+   - Assigned Agent ID
+- **Optional:**
+   - Rationale/Justification for the assignment
+
+
+## 🎯 Evaluation Criteria
+
+Your solution will be judged on:
+
+1. **Assignment Effectiveness** 
+   - How well tickets are matched to agent skills
+   - Likelihood of successful resolution
+
+2. **Prioritization Strategy**
+   - Creative use of ticket and agent attributes
+   - Intelligent priority scoring
+
+3. **Load Balancing**
+   - Fair distribution of workload
+   - Agent availability management
+
+4. **Performance & Scalability**
+   - Cost efficiency of the approach
+   - Ability to handle large datasets
+
+## 🏗️ Project Structure
+
+```
+pycon25-hackathon/
+├── dataset.json           # Input data (agents and tickets)
+├── output_result.json     # Expected output
+├── README.md             # This file
+└── [your solution files] # Your implementation
+```
+
+## 📈 Success Metrics
+
+Your solution should optimize for:
+- **Resolution Rate**: Tickets assigned to skilled agents
+- **Response Time**: Efficient agent utilization
+- **Workload Distribution**: Balanced assignment across team
+- **Scalability**: Performance with increasing data size
+
+## 🤝 Contributing
+
+This is a hackathon project - unleash your creativity and build an innovative solution!
+
+---
+
+**Happy Hacking!** 🎉
+
+
+
+
+
+
+
+--- File: sample_output_result.json ---
+{
+  "sample_output": [
+    {
+      "ticket_id": "TKT-2025-001",
+      "title": "VPN connection dropping intermittently for all remote users",
+      "assigned_agent_id": "agent_001",
+      "rationale": "Assigned to Sarah Chen (agent_001) based on her strong skills in 'Networking' (9) and 'VPN_Troubleshooting' (8) and her initial low workload."
+    },
+    {
+      "ticket_id": "TKT-2025-004",
+      "title": "New laptop fails to boot into OS after initial setup",
+      "assigned_agent_id": "agent_006",
+      "rationale": "Assigned to Emily Johnson (agent_006) for her expertise in 'Hardware_Diagnostics' (9) and 'Laptop_Repair' (8), combined with her lower workload."
+    }
+  ]
+}
+
+
+============================================================
+Statistics:
+- Files processed: 3
+- Total size: 59.27 KB
+- Project type: unknown
+============================================================
